@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/Logo.svg" type="image/x-icon">
+    <title>Music Player</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="player-container">
+        <div class="album-art">
+            <img src="" alt="Album Art" id="music_img">
+        </div>
+        <div class="song-info">
+            <h4 id="music_name">Blilit</h4>
+            <p id="music_artist">Fixelot</p>
+        </div>
+        <div class="progress-bar">
+            <div class="progress1" style="width: 0%;">
+                <audio src="" id="music_progress"></audio>
+            </div>
+        </div>
+
+        <div class="time">
+            <span id="current_time">00:36</span>
+            <span id="max_duration">05:39</span>
+        </div>
+        <div class="controls align-items-center">
+            <button class="mt-2"><i class="material-symbols-outlined fs-2" id="repeatList">
+                    repeat
+                </i></button>
+            <button id="prev"><i class="fa-solid fa-forward-step fa-rotate-180 fs-3"></i></button>
+            <button id="play"><i class="fa-solid fa-circle-play fa-2xl"></i></button>
+            <button id="next"><i class="fa-solid fa-forward-step fs-3"></i></button>
+            <button type="button" id="playlist" class="mt-1  btn-primary" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                <span class="material-symbols-outlined fs-1">queue_music</span>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+                <div class="modal-dialog m-3">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Music List</h1>
+                            <i type="button" class="btn-close fa-solid fa-xmark" style="color: #ffffff;" data-bs-dismiss="modal" aria-label="Close"></i>
+                        </div>
+                        <div class="modal-body">
+                            <ul>
+                                <li id="song1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="album-art album-img w-25  m-0">
+                                            <img src="" alt="Album Art" id="list_img1">
+                                        </div>
+                                        <div class="song-info w-50 m-0">
+                                            <h5 id="list_name1">Blilit</h5>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="song2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="album-art album-img w-25 m-0">
+                                            <img src="" alt="Album Art" id="list_img2">
+                                        </div>
+                                        <div class="song-info w-50 m-0">
+                                            <h5 id="list_name2">Blilit</h5>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="song3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="album-art album-img w-25 m-0">
+                                            <img src="" alt="Album Art" id="list_img3">
+                                        </div>
+                                        <div class="song-info w-50 m-0">
+                                            <h5 id="list_name3">Blilit</h5>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="song4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="album-art album-img w-25 m-0">
+                                            <img src="" alt="Album Art" id="list_img4">
+                                        </div>
+                                        <div class="song-info w-50 m-0">
+                                            <h5 id="list_name4">Blilit</h5>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="CSS/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/music_list.js"></script>
+</body>
+
+</html>

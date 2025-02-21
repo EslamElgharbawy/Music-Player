@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1a1a1a;
+}
+
+.player-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.album-art {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.album-art img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+}
+
+.song-info {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.song-info h2 {
+    font-size: 24px;
+}
+
+.song-info p {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 5px;
+    background: #555;
+    border-radius: 5px;
+    margin: 5px 0;
+    position: relative;
+    cursor: pointer;
+    overflow: inherit;
+}
+
+.progress1 {
+    height: 100%;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+}
+
+.progress1::before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    top: 50%;
+    right: -5px;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%);
+    background: inherit;
+    transition: opacity 0.2s ease;
+}
+
+.progress-bar:hover .progress1::before {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+
+.modal-content {
+    background: #222;
+    color: white;
+    border-radius: 10px;
+    z-index: 1050 !important;
+
+}
+
+.modal-body ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-body li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+}
+
+.modal-body li:hover {
+    background: #333;
+}
+.modal {
+    pointer-events: auto !important;
+}
+.modal-backdrop {
+    z-index: 0 !important;
+}
+
+
+.modal-backdrop {
+    opacity: 0 !important;
+    position: relative;
+    width: auto;
+}
+
+.btn-close{
+    opacity: 1;
+    border: none;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    background-image: none;
+}
